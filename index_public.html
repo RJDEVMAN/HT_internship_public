@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Voice Intent Detection</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <h1>🍕 Voice Ordering System</h1>
+
+  <button id="startBtn">🎤 Start Listening</button>
+  <button id="stopBtn" disabled>⛔ Stop</button>
+
+  <div class="output">
+    <p><strong>Status:</strong> <span id="status">Idle</span></p>
+    <p><strong>Intent:</strong> <span id="intent">—</span></p>
+    <p><strong>Slots:</strong></p>
+    <pre id="slots">{}</pre>
+  </div>
+
+  <!-- Picovoice Rhino Web SDK (CDN) -->
+  <script src="https://unpkg.com/@picovoice/rhino-web/dist/iife/rhino.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>
