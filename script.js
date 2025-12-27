@@ -1,5 +1,6 @@
 const ACCESS_KEY = "8jMvtCvLYAqzWilJdEZArkz6G4uJnBCCegjoVWzxSOuGiGIAgtn7gw=="; // REQUIRED
-const CONTEXT_URL = "./pizza.rhn"; 
+const RHINO_BASE_PATH = "./rhino/";
+const CONTEXT_URL = "./rhino/pizza.rhn";
 
 let rhino = null;
 let audioContext = null;
@@ -32,10 +33,13 @@ async function startListening() {
   setStatus("Initializing...");
 
   rhino = await window.Rhino.create(
-    ACCESS_KEY,
-    { publicPath: CONTEXT_URL },
-    inferenceCallback
-  );
+  ACCESS_KEY,
+  {
+    contextPath: CONTEXT_URL,
+    basePath: RHINO_BASE_PATH,
+  },
+  inferenceCallback
+);
 
   mediaStream = await navigator.mediaDevices.getUserMedia({ audio: true });
   audioContext = new AudioContext({ sampleRate: 16000 });
