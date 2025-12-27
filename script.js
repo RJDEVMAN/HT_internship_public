@@ -1,5 +1,5 @@
 const ACCESS_KEY = "8jMvtCvLYAqzWilJdEZArkz6G4uJnBCCegjoVWzxSOuGiGIAgtn7gw=="; // REQUIRED
-const CONTEXT_URL = "./pizza.rhn"; // served as a static file
+const CONTEXT_URL = "./pizza.rhn"; 
 
 let rhino = null;
 let audioContext = null;
